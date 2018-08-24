@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_Record_ID</name>
+        <label>Get Record ID</label>
+        <locationX>84</locationX>
+        <locationY>34</locationY>
+        <actionName>di_BindingParam</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Get_Widget</targetReference>
+        </connector>
+        <inputParameters>
+            <name>paramName</name>
+            <value>
+                <stringValue>recordId</stringValue>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>recordId</assignToReference>
+            <name>stringValue</name>
+        </outputParameters>
+    </actionCalls>
+    <interviewLabel>WidgetInfoFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>WidgetInfoFlow</label>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Widget</name>
+        <label>Get Widget</label>
+        <locationX>87</locationX>
+        <locationY>149</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Widget_Info_Flow_Screen</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Widget__c</object>
+        <outputReference>varWidget</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+    </recordLookups>
+    <screens>
+        <name>Widget_Info_Flow_Screen</name>
+        <label>Widget Info Flow Screen</label>
+        <locationX>276</locationX>
+        <locationY>147</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>text_RecordID</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Widget ID: &lt;/B&gt;{!varWidget.Id}&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Widget Name: &lt;/B&gt;&lt;A HREF=&quot;/{!varWidget.Id}&quot; TARGET=&quot;_self&quot;&gt;{!varWidget.Name}&lt;/A&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Get_Record_ID</startElementReference>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varWidget</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Widget__c</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Redirect_to_New_Record</name>
+        <label>Redirect to New Record</label>
+        <locationX>503</locationX>
+        <locationY>51</locationY>
+        <actionName>c:RedirectToRecordFlowActionCmp</actionName>
+        <actionType>component</actionType>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>varWidgetId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <interviewLabel>WidgetNewFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>WidgetNewFlow</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Widget</name>
+        <label>Create Widget</label>
+        <locationX>323</locationX>
+        <locationY>50</locationY>
+        <assignRecordIdToReference>varWidgetId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Redirect_to_New_Record</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>WidgetName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Widget__c</object>
+    </recordCreates>
+    <screens>
+        <name>New_Form_via_DI_Flow</name>
+        <label>New Form via DI (Flow)</label>
+        <locationX>152</locationX>
+        <locationY>53</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_Widget</targetReference>
+        </connector>
+        <fields>
+            <name>FormScreen</name>
+            <fieldText>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#CC00CC&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;This form brought to you by Flow.&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>WidgetName</name>
+            <dataType>String</dataType>
+            <fieldText>What to name your new widget?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>New_Form_via_DI_Flow</startElementReference>
+    <variables>
+        <name>varWidgetId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

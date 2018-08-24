@@ -1,0 +1,20 @@
+<aura:component>
+
+    <aura:attribute name="foobar" type="String"/>
+
+    <lightning:card title="New Form via DI (lightning component)">
+
+        <div class="slds-p-around_large">
+
+            <lightning:recordForm
+                    objectApiName="{!v.foobar}"
+                    layoutType="Full"
+                    columns="1"
+                    mode="edit"
+                    onsuccess="{!c.handleSubmit}"/>
+
+        </div>
+
+    </lightning:card>
+
+</aura:component>

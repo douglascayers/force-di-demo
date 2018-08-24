@@ -1,0 +1,27 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "force-app-demo1-base-pkg",
+      "default": false
+    },
+    {
+      "path": "force-app-demo1-message-pkg",
+      "default": false
+    },
+    {
+      "path": "force-app-demo2-widget-pkg",
+      "default": false
+    },
+    {
+      "path": "force-app-demo3-flow-pkg",
+      "default": false
+    }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "43.0"
+}

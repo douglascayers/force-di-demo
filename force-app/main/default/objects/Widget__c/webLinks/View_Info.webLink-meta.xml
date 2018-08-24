@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Info</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>View Info</masterLabel>
+    <openType>replace</openType>
+    <page>WidgetInfoPage</page>
+    <protected>false</protected>
+</WebLink>

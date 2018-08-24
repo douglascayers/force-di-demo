@@ -1,0 +1,23 @@
+<apex:component>
+
+    <apex:attribute name="recordId" type="String" description="Record id"/>
+    <apex:attribute name="recordName" type="String" description="Record name"/>
+
+    <apex:form>
+
+        <apex:pageBlock title="Widget Info">
+
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!'/' + recordId}" value=" Return "/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection columns="1">
+                <apex:outputText label="Widget ID" value="{!recordId}"/>
+                <apex:outputText label="Widget Name" value="{!recordName}"/>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:component>

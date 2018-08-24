@@ -1,0 +1,5 @@
+<apex:page standardController="Widget__c" extensions="WidgetInfoController" lightningStylesheets="false">
+
+    <c:di_injector bindingName="WidgetInfoPage" parameters="{!flowInputVariables}"/>
+
+</apex:page>

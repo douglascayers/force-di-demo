@@ -1,0 +1,15 @@
+<aura:component>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+    <lightning:card title="New Form via DI (flow)">
+
+        <div class="slds-p-around_large">
+
+            <lightning:flow aura:id="flow"/>
+
+        </div>
+
+    </lightning:card>
+
+</aura:component>
