@@ -7,7 +7,7 @@ public class ChatApp {
     }
 
     public ChatApp() {
-		this.message = (IMessage) di_Injector.Org.getInstance('ChatAppMessage');
+        this.message = (IMessage) di_Injector.Org.getInstance('ChatAppMessage');
     }
 
     public String greetings() {
