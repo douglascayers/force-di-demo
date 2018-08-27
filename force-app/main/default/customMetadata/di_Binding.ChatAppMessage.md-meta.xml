@@ -12,10 +12,10 @@
     </values>
     <values>
         <field>To__c</field>
-        <value xsi:type="xsd:string">WorkingMessage</value>
+        <value xsi:type="xsd:string">di_ChatAppModule</value>
     </values>
     <values>
         <field>Type__c</field>
-        <value xsi:type="xsd:string">Apex</value>
+        <value xsi:type="xsd:string">Module</value>
     </values>
 </CustomMetadata>
