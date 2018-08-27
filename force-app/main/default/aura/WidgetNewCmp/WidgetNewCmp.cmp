@@ -3,8 +3,7 @@
     <aura:attribute name="sObjectName" type="String"/>
 
     <c:di_injector bindingName="WidgetNewAction">
-        <c:di_injectorAttribute name="foobar" value="{!v.sObjectName}"/>
-        <c:di_injectorAttribute name="xxx" value="yyy"/>
+        <c:di_injectorAttribute name="objectName" value="{!v.sObjectName}"/>
     </c:di_injector>
 
 </aura:component>

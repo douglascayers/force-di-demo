@@ -1,13 +1,13 @@
 <aura:component>
 
-    <aura:attribute name="foobar" type="String"/>
+    <aura:attribute name="objectName" type="String"/>
 
     <lightning:card title="New Form via DI (lightning component)">
 
         <div class="slds-p-around_large">
 
             <lightning:recordForm
-                    objectApiName="{!v.foobar}"
+                    objectApiName="{!v.objectName}"
                     layoutType="Full"
                     columns="1"
                     mode="edit"
