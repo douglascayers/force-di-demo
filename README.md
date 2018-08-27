@@ -5,7 +5,7 @@ This is the sample code for the demos in my presentation to the
 [Nashville Salesforce Developers Group](https://www.meetup.com/Nashville-Salesforce-Developer-User-Group/events/253644240/)
 on August 23, 2018 and to the [Richmond Salesforce Developers Group](https://www.meetup.com/Richmond-Salesforce-Developer-Group/events/253681320/) about the open source dependency injection framework [force-di](https://github.com/afawcett/force-di).
 
-Slides are available [here](https://www.slideshare.net/douglascayers/dependency-injection-with-the-force-di-framework).
+Slides are available [here](https://www.slideshare.net/douglascayers/dependency-injection-with-the-force-di-framework-111838204).
 
 
 Instructions
