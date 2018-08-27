@@ -1,5 +1,5 @@
 
-public with sharing class di_ChatAppModule extends di_Module {
+public with sharing class ChatAppModule extends di_Module {
 
     public override void configure() {
 
